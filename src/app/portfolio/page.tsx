@@ -6,29 +6,29 @@ export default function Portfolio() {
     {
       id: 1,
       title: "OneBowla2.com",
-      description: "A modern, responsive website featuring clean design and smooth user experience. Built with the latest web technologies for optimal performance and user engagement.",
+      description: "A comprehensive restaurant website for One Bowl Asian Cuisine in Ann Arbor, featuring online ordering integration, detailed menu showcase, location information, and mobile-responsive design. Built to drive customer engagement and streamline the ordering process for authentic Asian cuisine.",
       image: "/projects/onebowla2.jpg",
       url: "https://onebowla2.com",
       technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-      category: "Web Application"
+      category: "Restaurant Website"
     },
     {
       id: 2,
-      title: "E-commerce Platform",
-      description: "A full-featured e-commerce solution with shopping cart, payment integration, and admin dashboard. Optimized for conversions and user experience.",
-      image: "/projects/ecommerce.jpg",
-      url: "#",
-      technologies: ["Next.js", "Stripe", "PostgreSQL", "Prisma"],
-      category: "E-commerce"
+      title: "SkillMapAI.org",
+      description: "An innovative AI-powered platform for skill mapping and career development. Features intelligent skill assessment, personalized learning paths, and comprehensive career guidance powered by advanced machine learning algorithms.",
+      image: "/projects/skillmapai.jpg",
+      url: "https://skillmapai.org",
+      technologies: ["React", "Next.js", "AI/ML", "TensorFlow", "Node.js"],
+      category: "AI Platform"
     },
     {
       id: 3,
-      title: "Portfolio Website",
-      description: "A stunning portfolio website for a creative agency, featuring smooth animations, responsive design, and optimized performance.",
-      image: "/projects/portfolio.jpg",
-      url: "#",
-      technologies: ["React", "Framer Motion", "Tailwind CSS"],
-      category: "Portfolio"
+      title: "MarinaPickle.com",
+      description: "A community crowdfunding platform for the Marina Pickleball Community Fund, featuring blockchain-powered donations, transparent fund allocation, and real-time progress tracking. Built to raise $1,500 for professional pickleball nets at Moscone Park in San Francisco.",
+      image: "/projects/marinapickle.jpg",
+      url: "https://marinapickle.com",
+      technologies: ["React", "Next.js", "Blockchain", "Ethereum", "Web3"],
+      category: "Community Platform"
     }
   ]
 
@@ -55,16 +55,37 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {projects.map((project) => (
               <div key={project.id} className="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                {/* Project Image Placeholder */}
-                <div className="h-64 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-white rounded-lg shadow-lg flex items-center justify-center mx-auto mb-4">
-                      <span className="text-lg font-bold text-primary-600">
-                        {project.title.split(/[.\s]/)[0].substring(0, 3).toUpperCase()}
-                      </span>
+                {/* Project Preview */}
+                <div className="h-64 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center relative">
+                  {project.url !== "#" && (project.id === 1 || project.id === 2 || project.id === 3) ? (
+                    // Live iframe preview for all live projects
+                    <div className="w-full h-full relative">
+                      <iframe
+                        src={project.url}
+                        className="w-full h-full border-0 rounded-t-xl"
+                        title={`Preview of ${project.title}`}
+                        loading="lazy"
+                        sandbox="allow-scripts allow-same-origin"
+                        style={{ 
+                          transform: 'scale(0.6)', 
+                          transformOrigin: 'top left',
+                          width: '166.67%',
+                          height: '166.67%'
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-t-xl"></div>
                     </div>
-                    <p className="text-primary-700 font-semibold">{project.category}</p>
-                  </div>
+                  ) : (
+                    // Fallback icon for other projects
+                    <div className="text-center">
+                      <div className="w-24 h-24 bg-white rounded-lg shadow-lg flex items-center justify-center mx-auto mb-4">
+                        <span className="text-lg font-bold text-primary-600">
+                          {project.title.split(/[.\s]/)[0].substring(0, 3).toUpperCase()}
+                        </span>
+                      </div>
+                      <p className="text-primary-700 font-semibold">{project.category}</p>
+                    </div>
+                  )}
                 </div>
 
                 {/* Project Details */}
@@ -116,12 +137,12 @@ export default function Portfolio() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
+                        <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Featured Project: OneBowla2.com
               </h2>
               <p className="text-xl text-gray-600">
-                Our latest showcase demonstrating modern web development excellence
+                Restaurant website driving customer engagement for authentic Asian cuisine in Ann Arbor
               </p>
             </div>
 
@@ -129,20 +150,22 @@ export default function Portfolio() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                    Modern Web Experience
+                    Restaurant Digital Experience
                   </h3>
                   <div className="space-y-4 text-gray-700">
                     <p>
-                      OneBowla2.com represents the pinnacle of modern web development, 
-                      featuring a responsive design that adapts seamlessly across all devices.
+                      OneBowla2.com serves as the digital gateway for One Bowl Asian Cuisine, 
+                      showcasing their authentic Vietnamese pho, Korean dishes, and traditional Asian flavors.
                     </p>
                     <p>
-                      Built with performance in mind, the site loads quickly and provides 
-                      an intuitive user experience that keeps visitors engaged.
+                      The website features seamless online ordering integration with DoorDash, 
+                      comprehensive menu displays with pricing, and easy-to-find location and hours information 
+                      for the Ann Arbor restaurant.
                     </p>
                     <p>
-                      The clean, professional design reflects the brand's values while 
-                      incorporating subtle animations and interactions that delight users.
+                      Designed with mobile-first principles to capture the on-the-go dining market, 
+                      the site converts visitors into customers through clear call-to-actions and 
+                      appetizing visual design that reflects the restaurant's authentic atmosphere.
                     </p>
                   </div>
                   <div className="mt-8">

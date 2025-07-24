@@ -101,8 +101,8 @@ export default function Home() {
                     OneBowla2.com
                   </h3>
                   <p className="text-gray-600 mb-6">
-                    A modern, responsive website featuring clean design and smooth user experience. 
-                    Built with the latest web technologies for optimal performance.
+                    Restaurant website for One Bowl Asian Cuisine in Ann Arbor, featuring online ordering integration, 
+                    comprehensive menu showcase, and mobile-responsive design that drives customer engagement and orders.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">
