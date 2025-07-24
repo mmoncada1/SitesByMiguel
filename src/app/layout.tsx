@@ -7,9 +7,9 @@ import React from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'SitesByMiguel - Professional Web Development',
+  title: 'Sites by Miguel - Professional Web Development',
   description: 'Creating modern, responsive websites and web applications. View our portfolio including onebowla2.com and other projects.',
-  keywords: 'web development, website design, portfolio, SitesByMiguel, onebowla2.com',
+  keywords: 'web development, website design, portfolio, Sites by Miguel, onebowla2.com',
 }
 
 export default function RootLayout({

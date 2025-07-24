@@ -146,9 +146,9 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl p-8 md:p-12">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
+            <div className="bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-2 min-h-96">
+                <div className="p-8 md:p-12 flex flex-col justify-center">
                   <h3 className="text-3xl font-bold text-gray-900 mb-6">
                     Restaurant Digital Experience
                   </h3>
@@ -181,13 +181,24 @@ export default function Portfolio() {
                   </div>
                 </div>
                 
-                <div className="text-center">
-                  <div className="bg-white rounded-xl shadow-xl p-8 inline-block">
-                    <div className="w-32 h-32 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl shadow-lg flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl font-bold text-white">OB2</span>
-                    </div>
-                    <p className="text-primary-700 font-semibold text-lg">OneBowla2.com</p>
-                    <p className="text-gray-500 text-sm">Live Production Site</p>
+                <div className="relative overflow-hidden">
+                  <iframe
+                    src="https://onebowla2.com"
+                    className="w-full h-full border-0 absolute top-0 left-0"
+                    title="Preview of OneBowla2.com"
+                    loading="lazy"
+                    sandbox="allow-scripts allow-same-origin"
+                    style={{ 
+                      transform: 'scale(0.8)', 
+                      transformOrigin: 'top left',
+                      width: '125%',
+                      height: '125%'
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 z-10"></div>
+                  <div className="absolute bottom-4 right-4 bg-black/70 backdrop-blur-sm rounded-lg px-3 py-2">
+                    <p className="text-white font-semibold text-sm">OneBowla2.com</p>
+                    <p className="text-white/80 text-xs">Live Production Site</p>
                   </div>
                 </div>
               </div>

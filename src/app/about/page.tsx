@@ -9,7 +9,7 @@ export default function About() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="gradient-text">SitesByMiguel</span>
+              About <span className="gradient-text">Sites by Miguel</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               I'm passionate about creating exceptional web experiences that drive results. 
@@ -31,7 +31,7 @@ export default function About() {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="text-xl leading-relaxed mb-8">
-                Hi, I'm Miguel Moncada-Larrotiz, the founder of SitesByMiguel. I started this venture 
+                Hi, I'm Miguel Moncada-Larrotiz, the founder of Sites by Miguel. I started this venture 
                 with a simple yet powerful vision: to create beautiful, functional websites that help 
                 businesses thrive in the digital age. What started as a passion project has evolved 
                 into a dedicated web development service that prioritizes quality, innovation, and client satisfaction.

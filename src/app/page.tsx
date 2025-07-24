@@ -10,7 +10,7 @@ export default function Home() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
               Modern Web Solutions by{' '}
-              <span className="gradient-text">SitesByMiguel</span>
+              <span className="gradient-text">Sites by Miguel</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
               Creating stunning, responsive websites and web applications that drive results. 
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose SitesByMiguel?
+              Why Choose Sites by Miguel?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               We combine cutting-edge technology with creative design to deliver exceptional web experiences.
@@ -125,13 +125,21 @@ export default function Home() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </div>
-                <div className="md:w-1/2 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center p-8">
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-white rounded-lg shadow-lg flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-primary-600">OB2</span>
-                    </div>
-                    <p className="text-primary-700 font-semibold">OneBowla2.com</p>
-                  </div>
+                <div className="md:w-1/2 bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
+                  <iframe
+                    src="https://onebowla2.com"
+                    className="w-full h-full border-0 absolute top-0 left-0"
+                    title="Preview of OneBowla2.com"
+                    loading="lazy"
+                    sandbox="allow-scripts allow-same-origin"
+                    style={{ 
+                      transform: 'scale(0.75)', 
+                      transformOrigin: 'top left',
+                      width: '133.33%',
+                      height: '133.33%'
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 z-10"></div>
                 </div>
               </div>
             </div>

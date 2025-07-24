@@ -13,7 +13,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold gradient-text">
-            SitesByMiguel
+            Sites by Miguel
           </Link>
 
           {/* Desktop Navigation */}
