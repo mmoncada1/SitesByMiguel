@@ -44,7 +44,7 @@ export default function About() {
               </p>
 
               <p className="text-lg leading-relaxed">
-                My featured project, OneBowla2.com, showcases my commitment to modern design principles, 
+                My featured project, OneBowlA2.com, showcases my commitment to modern design principles, 
                 responsive development, and user-centric experiences. It represents the quality and 
                 attention to detail that I bring to every project, regardless of size or complexity.
               </p>

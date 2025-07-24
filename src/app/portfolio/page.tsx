@@ -5,7 +5,7 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "OneBowla2.com",
+      title: "OneBowlA2.com",
       description: "A comprehensive restaurant website for One Bowl Asian Cuisine in Ann Arbor, featuring online ordering integration, detailed menu showcase, location information, and mobile-responsive design. Built to drive customer engagement and streamline the ordering process for authentic Asian cuisine.",
       image: "/projects/onebowla2.jpg",
       url: "https://onebowla2.com",
@@ -139,7 +139,7 @@ export default function Portfolio() {
           <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Featured Project: OneBowla2.com
+                Featured Project: OneBowlA2.com
               </h2>
               <p className="text-xl text-gray-600">
                 Restaurant website driving customer engagement for authentic Asian cuisine in Ann Arbor
@@ -154,7 +154,7 @@ export default function Portfolio() {
                   </h3>
                   <div className="space-y-4 text-gray-700">
                     <p>
-                      OneBowla2.com serves as the digital gateway for One Bowl Asian Cuisine, 
+                      OneBowlA2.com serves as the digital gateway for One Bowl Asian Cuisine, 
                       showcasing their authentic Vietnamese pho, Korean dishes, and traditional Asian flavors.
                     </p>
                     <p>
@@ -175,7 +175,7 @@ export default function Portfolio() {
                       rel="noopener noreferrer"
                       className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors inline-flex items-center"
                     >
-                      Visit OneBowla2.com
+                      Visit OneBowlA2.com
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </div>
@@ -185,7 +185,7 @@ export default function Portfolio() {
                   <iframe
                     src="https://onebowla2.com"
                     className="w-full h-full border-0 absolute top-0 left-0"
-                    title="Preview of OneBowla2.com"
+                    title="Preview of OneBowlA2.com"
                     loading="lazy"
                     sandbox="allow-scripts allow-same-origin"
                     style={{ 
@@ -197,7 +197,7 @@ export default function Portfolio() {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 z-10"></div>
                   <div className="absolute bottom-4 right-4 bg-black/70 backdrop-blur-sm rounded-lg px-3 py-2">
-                    <p className="text-white font-semibold text-sm">OneBowla2.com</p>
+                    <p className="text-white font-semibold text-sm">OneBowlA2.com</p>
                     <p className="text-white/80 text-xs">Live Production Site</p>
                   </div>
                 </div>

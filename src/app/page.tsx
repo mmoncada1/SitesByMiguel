@@ -98,7 +98,7 @@ export default function Home() {
               <div className="md:flex">
                 <div className="md:w-1/2 p-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    OneBowla2.com
+                    OneBowlA2.com
                   </h3>
                   <p className="text-gray-600 mb-6">
                     Restaurant website for One Bowl Asian Cuisine in Ann Arbor, featuring online ordering integration, 
@@ -129,7 +129,7 @@ export default function Home() {
                   <iframe
                     src="https://onebowla2.com"
                     className="w-full h-full border-0 absolute top-0 left-0"
-                    title="Preview of OneBowla2.com"
+                    title="Preview of OneBowlA2.com"
                     loading="lazy"
                     sandbox="allow-scripts allow-same-origin"
                     style={{ 

@@ -222,7 +222,7 @@ export default function Contact() {
                   Featured Project
                 </h3>
                 <p className="text-gray-700 mb-6">
-                  Check out our latest work on OneBowla2.com - a showcase of modern web development.
+                  Check out our latest work on OneBowlA2.com - a showcase of modern web development.
                 </p>
                 <a 
                   href="https://onebowla2.com" 
@@ -230,7 +230,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors inline-block"
                 >
-                  Visit OneBowla2.com
+                  Visit OneBowlA2.com
                 </a>
               </div>
 
