@@ -12,8 +12,15 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold gradient-text">
-            Sites by Miguel
+          <Link href="/" className="flex items-center space-x-3">
+            <img 
+              src="/favicon.svg" 
+              alt="Sites by Miguel Logo" 
+              className="w-8 h-8"
+            />
+            <span className="text-2xl font-bold gradient-text">
+              Sites by Miguel
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

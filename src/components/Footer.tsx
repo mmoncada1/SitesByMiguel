@@ -7,7 +7,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold gradient-text mb-4">Sites by Miguel</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/favicon.svg" 
+                alt="Sites by Miguel Logo" 
+                className="w-8 h-8"
+              />
+              <h3 className="text-2xl font-bold gradient-text">Sites by Miguel</h3>
+            </div>
             <p className="text-gray-300 mb-4">
               Creating modern, responsive websites and web applications that drive results. 
               Specializing in custom web solutions for businesses of all sizes.
