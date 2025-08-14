@@ -6,23 +6,32 @@ export default function Portfolio() {
     {
       id: 1,
       title: "OneBowlA2.com",
-      description: "A comprehensive restaurant website for One Bowl Asian Cuisine in Ann Arbor, featuring online ordering integration, detailed menu showcase, location information, and mobile-responsive design. Built to drive customer engagement and streamline the ordering process for authentic Asian cuisine.",
+      description: "Modern restaurant website featuring online ordering, catering services, and delivery integration. Built for OneBowlA2, a Vietnamese restaurant in San Francisco's Mission District, showcasing their authentic pho, banh mi, and Vietnamese specialties with seamless user experience.",
       image: "/projects/onebowla2.jpg",
       url: "https://onebowla2.com",
-      technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+      technologies: ["React", "Next.js", "Tailwind CSS", "Stripe", "Node.js"],
       category: "Restaurant Website"
     },
     {
       id: 2,
-      title: "SkillMapAI.org",
-      description: "An innovative AI-powered platform for skill mapping and career development. Features intelligent skill assessment, personalized learning paths, and comprehensive career guidance powered by advanced machine learning algorithms.",
-      image: "/projects/skillmapai.jpg",
-      url: "https://skillmapai.org",
-      technologies: ["React", "Next.js", "AI/ML", "TensorFlow", "Node.js"],
-      category: "AI Platform"
+      title: "MoonDAO.com",
+      description: "The Internet's space program - a decentralized autonomous organization that has raised $8M+ and sent 2 people to space. Features governance systems, project funding, and the Space Acceleration Network. Building humanity's multiplanetary future through blockchain technology and community governance.",
+      image: "/projects/moondao.jpg",
+      url: "https://moondao.com",
+      technologies: ["React", "Next.js", "Web3", "DAO", "Ethereum", "Governance"],
+      category: "DAO Platform"
     },
     {
       id: 3,
+      title: "SkillMapAI.org",
+      description: "An AI-powered platform that creates personalized learning roadmaps and skill development paths. Features intelligent course recommendations, progress tracking, and integration with major learning platforms to help users achieve their career goals efficiently.",
+      image: "/projects/skillmapai.jpg",
+      url: "https://skillmapai.org",
+      technologies: ["React", "Next.js", "AI/ML", "Python", "PostgreSQL"],
+      category: "AI Platform"
+    },
+    {
+      id: 4,
       title: "MarinaPickle.com",
       description: "A community crowdfunding platform for the Marina Pickleball Community Fund, featuring blockchain-powered donations, transparent fund allocation, and real-time progress tracking. Built to raise $1,500 for professional pickleball nets at Moscone Park in San Francisco.",
       image: "/projects/marinapickle.jpg",
@@ -57,7 +66,7 @@ export default function Portfolio() {
               <div key={project.id} className="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                 {/* Project Preview */}
                 <div className="h-64 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center relative">
-                  {project.url !== "#" && (project.id === 1 || project.id === 2 || project.id === 3) ? (
+                  {project.url !== "#" && (project.id === 1 || project.id === 2 || project.id === 3 || project.id === 4) ? (
                     // Live iframe preview for all live projects
                     <div className="w-full h-full relative">
                       <iframe
