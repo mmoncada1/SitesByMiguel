@@ -25,7 +25,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Our Story
+                My Story
               </h2>
             </div>
 
@@ -58,10 +58,10 @@ export default function About() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Values
+              My Values
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              These core principles guide everything we do
+              These core principles guide everything I do
             </p>
           </div>
 
@@ -72,7 +72,7 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Quality First</h3>
               <p className="text-gray-600">
-                We never compromise on quality. Every line of code, every design element, 
+                I never compromise on quality. Every line of code, every design element, 
                 and every user interaction is crafted with precision and care.
               </p>
             </div>
@@ -83,7 +83,7 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Client-Focused</h3>
               <p className="text-gray-600">
-                Your success is our success. We work closely with clients to understand 
+                Your success is my success. I work closely with clients to understand 
                 their needs and deliver solutions that exceed expectations.
               </p>
             </div>
@@ -94,8 +94,8 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Timely Delivery</h3>
               <p className="text-gray-600">
-                We respect deadlines and understand the importance of launching on time. 
-                Our efficient processes ensure projects are delivered when promised.
+                I respect deadlines and understand the importance of launching on time. 
+                My efficient processes ensure projects are delivered when promised.
               </p>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function About() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What We Do
+              What I Do
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive web development services tailored to your needs
