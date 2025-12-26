@@ -8,6 +8,24 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
+      title: "MichiganStocksAndBonds.com",
+      description: "Professional website for Michigan Stocks and Bonds (MSBO), a highly selective undergraduate investment organization at the University of Michigan. Features recruitment information, team profiles, placement statistics, and showcases their focus on investing, education, philanthropy, and professional development.",
+      image: "/projects/michiganstocksandbonds.jpg",
+      url: "https://michiganstocksandbonds.com",
+      technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript", "SEO"],
+      category: "Student Organization Website",
+      details: {
+        client: "Michigan Stocks and Bonds (MSBO)",
+        duration: "4 weeks",
+        teamSize: "Solo developer (Miguel Moncada)",
+        challenges: "Creating a professional, engaging website for a premier student investment organization that attracts top talent while showcasing their investment expertise, education programs, and strong alumni placement record",
+        solutions: "Developed a modern, professional design highlighting their four pillars (Investing, Education, Philanthropy, Professional Development), team structure with sector desks, and impressive placement statistics. Clean navigation with recruitment-focused CTAs",
+        results: "Established strong digital presence for University of Michigan's leading investment club, professional platform for student recruitment, showcase of organization's impact and opportunities",
+        features: ["Recruitment Information", "Team Profiles", "Placement Statistics", "About Organization", "Application Portal", "Mobile Responsive Design", "SEO Optimized"]
+      }
+    },
+    {
+      id: 2,
       title: "OneBowlA2.com",
       description: "Modern restaurant website featuring online ordering, catering services, and delivery integration. Built for One Bowl Asian Cuisine, located in Ann Arbor, Michigan, serving authentic Asian dishes including pho, ramen, Korean and Chinese cuisine with fresh ingredients and traditional recipes.",
       image: "/projects/onebowla2.jpg",
@@ -25,7 +43,7 @@ export default function Portfolio() {
       }
     },
     {
-      id: 2,
+      id: 3,
       title: "MoonDAO.com",
       description: "The Internet's space program - a decentralized autonomous organization that has raised $8M+ and sent 2 people to space. Features governance systems, project funding, and the Space Acceleration Network. Building humanity's multiplanetary future through blockchain technology and community governance.",
       image: "/projects/moondao.jpg",
@@ -43,7 +61,7 @@ export default function Portfolio() {
       }
     },
     {
-      id: 3,
+      id: 4,
       title: "SkillMapAI.org",
       description: "An AI-powered platform that creates personalized learning roadmaps for any skill or topic. Users can enter their learning goals and experience level to receive curated learning paths with resources, featuring popular tracks in frontend development, data science, digital marketing, and more.",
       image: "/projects/skillmapai.jpg",
@@ -61,7 +79,7 @@ export default function Portfolio() {
       }
     },
     {
-      id: 4,
+      id: 5,
       title: "MarinaPickle.com",
       description: "A blockchain-powered crowdfunding platform for the Marina Pickleball Community Fund, created to raise $1,500 for two professional-grade pickleball nets at Moscone Park in San Francisco. Features transparent fund allocation and smart contract technology for community fundraising.",
       image: "/projects/marinapickle.jpg",
@@ -105,7 +123,7 @@ export default function Portfolio() {
               <div key={project.id} className="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                 {/* Project Preview */}
                 <div className="h-64 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center relative">
-                  {project.url !== "#" && (project.id === 1 || project.id === 2 || project.id === 3 || project.id === 4) ? (
+                  {project.url !== "#" && (project.id === 1 || project.id === 2 || project.id === 3 || project.id === 4 || project.id === 5) ? (
                     // Live iframe preview for all live projects
                     <div className="w-full h-full relative">
                       <iframe
@@ -190,10 +208,10 @@ export default function Portfolio() {
           <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Featured Project: OneBowlA2.com
+                Featured Project: MichiganStocksAndBonds.com
               </h2>
               <p className="text-xl text-gray-600">
-                Restaurant website driving customer engagement for authentic Asian cuisine in Ann Arbor
+                Student investment organization website driving recruitment for UMich's premier finance club
               </p>
             </div>
 
@@ -201,32 +219,31 @@ export default function Portfolio() {
               <div className="grid grid-cols-1 lg:grid-cols-2 min-h-96">
                 <div className="p-8 md:p-12 flex flex-col justify-center">
                   <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                    Restaurant Digital Experience
+                    Student Investment Organization Platform
                   </h3>
                   <div className="space-y-4 text-gray-700">
                     <p>
-                      OneBowlA2.com serves as the digital gateway for One Bowl Asian Cuisine, 
-                      showcasing their authentic Vietnamese pho, Korean dishes, and traditional Asian flavors.
+                      MichiganStocksAndBonds.com serves as the digital home for MSBO, University of Michigan's highly selective 
+                      undergraduate investment organization focused on hands-on portfolio management, finance education, and professional development.
                     </p>
                     <p>
-                      The website features seamless online ordering integration with DoorDash, 
-                      comprehensive menu displays with pricing, and easy-to-find location and hours information 
-                      for the Ann Arbor restaurant.
+                      The website showcases their four pillars - Investing, Education, Philanthropy, and Professional Development - 
+                      with detailed team structure across eight sector desks, impressive placement statistics at top firms, 
+                      and a streamlined application process for prospective members.
                     </p>
                     <p>
-                      Designed with mobile-first principles to capture the on-the-go dining market, 
-                      the site converts visitors into customers through clear call-to-actions and 
-                      appetizing visual design that reflects the restaurant's authentic atmosphere.
+                      Built to attract ambitious students and highlight the organization's impact, the site features modern design, 
+                      clear recruitment messaging, and comprehensive information about the MSBO experience and community.
                     </p>
                   </div>
                   <div className="mt-8">
                     <a 
-                      href="https://onebowla2.com" 
+                      href="https://michiganstocksandbonds.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors inline-flex items-center"
                     >
-                      Visit OneBowlA2.com
+                      Visit MichiganStocksAndBonds.com
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </div>
@@ -234,9 +251,9 @@ export default function Portfolio() {
                 
                 <div className="relative overflow-hidden">
                   <iframe
-                    src="https://onebowla2.com"
+                    src="https://michiganstocksandbonds.com"
                     className="w-full h-full border-0 absolute top-0 left-0"
-                    title="Preview of OneBowlA2.com"
+                    title="Preview of MichiganStocksAndBonds.com"
                     loading="lazy"
                     sandbox="allow-scripts allow-same-origin"
                     style={{ 
@@ -248,7 +265,7 @@ export default function Portfolio() {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 z-10"></div>
                   <div className="absolute bottom-4 right-4 bg-black/70 backdrop-blur-sm rounded-lg px-3 py-2">
-                    <p className="text-white font-semibold text-sm">OneBowlA2.com</p>
+                    <p className="text-white font-semibold text-sm">MichiganStocksAndBonds.com</p>
                     <p className="text-white/80 text-xs">Live Production Site</p>
                   </div>
                 </div>

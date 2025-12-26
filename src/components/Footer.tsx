@@ -60,12 +60,12 @@ export default function Footer() {
               <p>Location: Michigan, USA</p>
               <p>Portfolio Showcase:</p>
               <a 
-                href="https://onebowla2.com" 
+                href="https://michiganstocksandbonds.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary-400 hover:text-primary-300 transition-colors"
               >
-                onebowla2.com
+                michiganstocksandbonds.com
               </a>
             </div>
           </div>

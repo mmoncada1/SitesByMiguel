@@ -145,11 +145,11 @@ export default function Home() {
               <div className="md:flex">
                 <div className="md:w-1/2 p-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    OneBowlA2.com
+                    MichiganStocksAndBonds.com
                   </h3>
                   <p className="text-gray-600 mb-6">
-                    Restaurant website for One Bowl Asian Cuisine in Ann Arbor, featuring online ordering integration, 
-                    comprehensive menu showcase, and mobile-responsive design that drives customer engagement and orders.
+                    Student investment organization website for University of Michigan's premier finance club, featuring recruitment information, 
+                    team profiles, placement statistics, and comprehensive showcase of their investing, education, and professional development programs.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">
@@ -163,7 +163,7 @@ export default function Home() {
                     </span>
                   </div>
                   <a 
-                    href="https://onebowla2.com" 
+                    href="https://michiganstocksandbonds.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold"
@@ -172,18 +172,20 @@ export default function Home() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </div>
-                <div className="md:w-1/2 bg-gradient-to-br from-primary-100 to-primary-200 relative overflow-hidden">
+                <div className="md:w-1/2 bg-gray-100 relative overflow-hidden">
                   <iframe
-                    src="https://onebowla2.com"
-                    className="w-full h-full border-0 absolute top-0 left-0"
-                    title="Preview of OneBowlA2.com"
+                    src="https://michiganstocksandbonds.com"
+                    className="w-full h-full border-0 absolute"
+                    title="Preview of MichiganStocksAndBonds.com"
                     loading="lazy"
                     sandbox="allow-scripts allow-same-origin"
                     style={{ 
                       transform: 'scale(0.75)', 
                       transformOrigin: 'top left',
                       width: '133.33%',
-                      height: '133.33%'
+                      height: '133.33%',
+                      top: '0',
+                      left: '0'
                     }}
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 z-10"></div>

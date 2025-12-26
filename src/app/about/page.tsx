@@ -31,22 +31,25 @@ export default function About() {
 
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="text-xl leading-relaxed mb-8">
-                Hi, I'm Miguel Moncada-Larrotiz, the founder of Sites by Miguel. I started this venture 
-                with a simple yet powerful vision: to create beautiful, functional websites that help 
-                businesses thrive in the digital age. What started as a passion project has evolved 
-                into a dedicated web development service that prioritizes quality, innovation, and client satisfaction.
+                Hi, I'm Miguel Moncada-Larrotiz, a Computer Science student at the University of Michigan 
+                and the founder of Sites by Miguel. I'm passionate about building high-performance websites 
+                and web applications that deliver exceptional user experiences and drive real business results.
               </p>
               
               <p className="text-lg leading-relaxed mb-8">
-                I believe that every business deserves a professional online presence that reflects 
-                their unique brand and values. That's why I take the time to understand each client's 
-                goals, target audience, and vision before crafting custom solutions that exceed expectations.
+                My journey in web development started with a fascination for how technology can transform 
+                businesses and connect people. Through my education at Michigan and hands-on experience as 
+                a Development Intern at MoonDAO, I've honed my skills in modern web technologies including 
+                React, Next.js, JavaScript, Python, and C++. I specialize in creating responsive, scalable 
+                solutions that combine clean design with robust functionality.
               </p>
 
               <p className="text-lg leading-relaxed">
-                My featured project, OneBowlA2.com, showcases my commitment to modern design principles, 
-                responsive development, and user-centric experiences. It represents the quality and 
-                attention to detail that I bring to every project, regardless of size or complexity.
+                Sites by Miguel represents my commitment to delivering high-quality web solutions for 
+                businesses and organizations of all sizes. From student organizations like Michigan Stocks 
+                and Bonds to local restaurants like One Bowl Asian Cuisine, I bring the same level of 
+                dedication, technical expertise, and attention to detail to every project. I believe every 
+                business deserves a professional online presence that truly represents their brand and drives growth.
               </p>
             </div>
           </div>
