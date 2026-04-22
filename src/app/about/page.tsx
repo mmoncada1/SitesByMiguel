@@ -1,201 +1,278 @@
 import Link from 'next/link'
-import { ArrowRight, Award, Users, Clock } from 'lucide-react'
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Award,
+  Users,
+  Clock,
+  Code2,
+  Layers,
+  ShoppingBag,
+  LifeBuoy,
+  Sparkles,
+} from 'lucide-react'
+
+const values = [
+  {
+    icon: Award,
+    title: 'Quality first',
+    body:
+      'Every line of code and every design detail is crafted with care and precision.',
+  },
+  {
+    icon: Users,
+    title: 'Client-focused',
+    body:
+      'I work closely with you to understand your goals and deliver beyond expectations.',
+  },
+  {
+    icon: Clock,
+    title: 'Timely delivery',
+    body:
+      'Clear processes and honest timelines — projects ship when promised.',
+  },
+]
+
+const services = [
+  {
+    icon: Code2,
+    title: 'Web development',
+    body:
+      'Custom websites and web applications built with modern tooling like Next.js and TypeScript.',
+    bullets: [
+      'Responsive design',
+      'Performance optimization',
+      'SEO & accessibility',
+      'Cross-browser support',
+    ],
+  },
+  {
+    icon: ShoppingBag,
+    title: 'E-commerce',
+    body:
+      'Full-featured stores with secure payments, inventory, and polished admin experiences.',
+    bullets: [
+      'Payment integration',
+      'Inventory management',
+      'Order processing',
+      'Customer accounts',
+    ],
+  },
+  {
+    icon: Layers,
+    title: 'UI/UX design',
+    body:
+      'Elegant, usable interfaces that turn visitors into customers across every device.',
+    bullets: [
+      'User research',
+      'Wireframing & prototyping',
+      'Visual design systems',
+      'Usability testing',
+    ],
+  },
+  {
+    icon: LifeBuoy,
+    title: 'Maintenance & support',
+    body:
+      'Ongoing updates and monitoring to keep your site fast, secure, and healthy.',
+    bullets: [
+      'Security updates',
+      'Performance monitoring',
+      'Content updates',
+      'Technical support',
+    ],
+  },
+]
+
+const stack = [
+  'React',
+  'Next.js',
+  'TypeScript',
+  'Tailwind CSS',
+  'Node.js',
+  'Python',
+  'PostgreSQL',
+  'Web3',
+]
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header Section */}
-      <section className="bg-gradient-to-br from-primary-50 to-white py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="gradient-text">Sites by Miguel</span>
+    <>
+      {/* HERO */}
+      <section className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-grid-light mask-fade-b" />
+        <div className="pointer-events-none absolute -top-32 left-1/2 -z-10 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-to-br from-primary-300/40 via-accent-400/20 to-transparent blur-3xl" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 sm:pt-28">
+          <div className="mx-auto max-w-4xl text-center animate-fade-up">
+            <span className="chip">
+              <Sparkles className="h-3.5 w-3.5 text-primary-600" />
+              About the studio
+            </span>
+            <h1 className="mt-6 text-5xl font-semibold tracking-tightest text-ink-900 sm:text-6xl md:text-7xl">
+              Small studio. <span className="gradient-text">Big craft.</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              I'm passionate about creating exceptional web experiences that drive results. 
-              My mission is to help businesses succeed online through innovative design and development.
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-ink-600 sm:text-xl">
+              I&apos;m passionate about creating web experiences that move people —
+              and move businesses forward. Here&apos;s a little about how I work.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Story Section */}
-      <section className="py-20">
+      {/* STORY */}
+      <section className="section bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                My Story
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-5">
+            <div className="lg:col-span-2">
+              <span className="eyebrow">My story</span>
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight text-ink-900">
+                Code, design, and a love for shipping.
               </h2>
             </div>
+            <div className="lg:col-span-3 space-y-6 text-[17px] leading-relaxed text-ink-600">
+              <p>
+                Hi, I&apos;m{' '}
+                <span className="font-semibold text-ink-900">
+                  Miguel Moncada-Larrotiz
+                </span>
+                , a Computer Science student at the University of Michigan and
+                the founder of Sites by Miguel. I build high-performance websites
+                and web applications with a focus on clarity, craft, and real
+                business outcomes.
+              </p>
+              <p>
+                My journey started with a fascination for how technology can
+                transform businesses and connect people. Through my education at
+                Michigan and hands-on experience as a Development Intern at
+                MoonDAO, I&apos;ve sharpened my skills across React, Next.js,
+                TypeScript, Python, and C++.
+              </p>
+              <p>
+                From student organizations like Michigan Stocks and Bonds to
+                local restaurants like One Bowl Asian Cuisine, I bring the same
+                level of dedication and attention to detail to every project.
+                Every business deserves a professional online presence that
+                truly represents their brand.
+              </p>
 
-            <div className="prose prose-lg max-w-none text-gray-700">
-              <p className="text-xl leading-relaxed mb-8">
-                Hi, I'm Miguel Moncada-Larrotiz, a Computer Science student at the University of Michigan 
-                and the founder of Sites by Miguel. I'm passionate about building high-performance websites 
-                and web applications that deliver exceptional user experiences and drive real business results.
-              </p>
-              
-              <p className="text-lg leading-relaxed mb-8">
-                My journey in web development started with a fascination for how technology can transform 
-                businesses and connect people. Through my education at Michigan and hands-on experience as 
-                a Development Intern at MoonDAO, I've honed my skills in modern web technologies including 
-                React, Next.js, JavaScript, Python, and C++. I specialize in creating responsive, scalable 
-                solutions that combine clean design with robust functionality.
-              </p>
-
-              <p className="text-lg leading-relaxed">
-                Sites by Miguel represents my commitment to delivering high-quality web solutions for 
-                businesses and organizations of all sizes. From student organizations like Michigan Stocks 
-                and Bonds to local restaurants like One Bowl Asian Cuisine, I bring the same level of 
-                dedication, technical expertise, and attention to detail to every project. I believe every 
-                business deserves a professional online presence that truly represents their brand and drives growth.
-              </p>
+              <div className="pt-2">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-ink-500">
+                  Tech I work with
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {stack.map((t) => (
+                    <span key={t} className="chip">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 bg-gray-50">
+      {/* VALUES */}
+      <section className="section bg-ink-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              My Values
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="eyebrow">Values</span>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight text-ink-900 sm:text-5xl">
+              The principles behind the pixels.
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              These core principles guide everything I do
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-3">
+            {values.map((v) => (
+              <div key={v.title} className="card p-8">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-600 to-accent-600 text-white">
+                  <v.icon className="h-5 w-5" />
+                </div>
+                <h3 className="mt-6 text-xl font-semibold tracking-tight text-ink-900">
+                  {v.title}
+                </h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-ink-600">
+                  {v.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="section bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="eyebrow">Services</span>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight text-ink-900 sm:text-5xl">
+              What I do — end to end.
+            </h2>
+            <p className="mt-5 text-lg text-ink-600">
+              Comprehensive web services tailored to your goals and your brand.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg card-hover">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Award className="h-8 w-8 text-primary-600" />
+          <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2">
+            {services.map((s) => (
+              <div key={s.title} className="card p-8">
+                <div className="flex items-start gap-5">
+                  <div className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-ink-900 text-white">
+                    <s.icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold tracking-tight text-ink-900">
+                      {s.title}
+                    </h3>
+                    <p className="mt-2 text-[15px] leading-relaxed text-ink-600">
+                      {s.body}
+                    </p>
+                    <ul className="mt-5 grid grid-cols-1 gap-2 text-sm text-ink-700 sm:grid-cols-2">
+                      {s.bullets.map((b) => (
+                        <li key={b} className="flex items-center gap-2">
+                          <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-br from-primary-500 to-accent-600" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Quality First</h3>
-              <p className="text-gray-600">
-                I never compromise on quality. Every line of code, every design element, 
-                and every user interaction is crafted with precision and care.
-              </p>
-            </div>
-
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg card-hover">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="h-8 w-8 text-primary-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Client-Focused</h3>
-              <p className="text-gray-600">
-                Your success is my success. I work closely with clients to understand 
-                their needs and deliver solutions that exceed expectations.
-              </p>
-            </div>
-
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg card-hover">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="h-8 w-8 text-primary-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Timely Delivery</h3>
-              <p className="text-gray-600">
-                I respect deadlines and understand the importance of launching on time. 
-                My efficient processes ensure projects are delivered when promised.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What I Do
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive web development services tailored to your needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="p-8 border border-gray-200 rounded-xl card-hover">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Web Development</h3>
-              <p className="text-gray-600 mb-4">
-                Custom websites and web applications built with modern technologies like React, 
-                Next.js, and TypeScript. From simple landing pages to complex web applications.
-              </p>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Responsive Design</li>
-                <li>• Performance Optimization</li>
-                <li>• SEO Implementation</li>
-                <li>• Cross-browser Compatibility</li>
-              </ul>
-            </div>
-
-            <div className="p-8 border border-gray-200 rounded-xl card-hover">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">E-commerce Solutions</h3>
-              <p className="text-gray-600 mb-4">
-                Complete e-commerce platforms with shopping carts, payment processing, 
-                inventory management, and admin dashboards.
-              </p>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Payment Integration</li>
-                <li>• Inventory Management</li>
-                <li>• Order Processing</li>
-                <li>• Customer Management</li>
-              </ul>
-            </div>
-
-            <div className="p-8 border border-gray-200 rounded-xl card-hover">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">UI/UX Design</h3>
-              <p className="text-gray-600 mb-4">
-                Beautiful, intuitive user interfaces that provide exceptional user experiences 
-                across all devices and screen sizes.
-              </p>
-              <ul className="text-gray-600 space-y-2">
-                <li>• User Research</li>
-                <li>• Wireframing & Prototyping</li>
-                <li>• Visual Design</li>
-                <li>• Usability Testing</li>
-              </ul>
-            </div>
-
-            <div className="p-8 border border-gray-200 rounded-xl card-hover">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Maintenance & Support</h3>
-              <p className="text-gray-600 mb-4">
-                Ongoing maintenance, updates, and support to keep your website running 
-                smoothly and securely.
-              </p>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Security Updates</li>
-                <li>• Performance Monitoring</li>
-                <li>• Content Updates</li>
-                <li>• Technical Support</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-primary-600">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Ready to Work Together?
+      {/* CTA */}
+      <section className="relative overflow-hidden bg-ink-950 text-white">
+        <div className="pointer-events-none absolute inset-0 bg-grid-dark opacity-40 mask-fade-b" />
+        <div className="pointer-events-none absolute -top-24 left-1/2 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-gradient-to-br from-primary-600/40 to-accent-600/20 blur-3xl" />
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <h2 className="mx-auto max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            Ready to work together?
           </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss your project and create something amazing together. 
-            We're excited to hear about your vision and help bring it to life.
+          <p className="mx-auto mt-5 max-w-xl text-lg text-ink-300">
+            Let&apos;s talk through your vision and ship something great.
           </p>
-          <Link 
-            href="/contact" 
-            className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center"
-          >
-            Get In Touch
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink-900 transition hover:-translate-y-px hover:shadow-[0_16px_40px_-10px_rgba(255,255,255,0.35)]"
+            >
+              Get in touch
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/portfolio"
+              className="inline-flex items-center gap-2 rounded-full bg-white/5 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/10"
+            >
+              See the work
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }
