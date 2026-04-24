@@ -289,7 +289,7 @@ export default function Home() {
                     href="/portfolio"
                     className="inline-flex items-center gap-2 rounded-full bg-white/5 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/10"
                   >
-                    Case study
+                    View all work
                   </Link>
                 </div>
               </div>
