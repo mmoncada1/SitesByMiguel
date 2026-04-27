@@ -8,6 +8,8 @@ import { Menu, X, ArrowUpRight } from 'lucide-react'
 const nav = [
   { href: '/', label: 'Home' },
   { href: '/portfolio', label: 'Work' },
+  { href: '/#student-orgs', label: 'Student Orgs' },
+  { href: '/#packages', label: 'Packages' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
@@ -55,7 +57,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1 rounded-full bg-white/60 p-1 ring-1 ring-ink-200/80 backdrop-blur">
+          <nav className="hidden lg:flex items-center gap-1 rounded-full bg-white/60 p-1 ring-1 ring-ink-200/80 backdrop-blur">
             {nav.map((item) => {
               const active =
                 item.href === '/'
@@ -65,7 +67,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+                  className={`relative rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
                     active
                       ? 'text-white bg-ink-900 shadow-[0_6px_18px_-6px_rgba(15,23,42,0.55)]'
                       : 'text-ink-600 hover:text-ink-900'
@@ -78,19 +80,19 @@ export default function Header() {
           </nav>
 
           {/* CTA */}
-          <div className="hidden md:flex">
+          <div className="hidden lg:flex">
             <Link
-              href="/contact"
+              href="/#contact"
               className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 px-4 py-2 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(124,58,237,0.7)] transition-all duration-300 hover:shadow-[0_16px_40px_-10px_rgba(124,58,237,0.8)] hover:-translate-y-px"
             >
-              Start a project
+              Start Your Website
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
 
           {/* Mobile button */}
           <button
-            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full ring-1 ring-ink-200 bg-white/80 backdrop-blur text-ink-800"
+            className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full ring-1 ring-ink-200 bg-white/80 backdrop-blur text-ink-800"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
           >
@@ -100,7 +102,7 @@ export default function Header() {
 
         {/* Mobile nav */}
         {open && (
-          <div className="md:hidden pb-5 animate-fade-in">
+          <div className="lg:hidden pb-5 animate-fade-in">
             <div className="rounded-2xl bg-white ring-1 ring-ink-200 p-2 shadow-[0_24px_48px_-16px_rgba(15,23,42,0.25)]">
               {nav.map((item) => {
                 const active =
@@ -122,10 +124,10 @@ export default function Header() {
                 )
               })}
               <Link
-                href="/contact"
+                href="/#contact"
                 className="mt-1 block rounded-xl bg-gradient-to-r from-primary-600 to-accent-600 px-4 py-3 text-center text-sm font-semibold text-white"
               >
-                Start a project →
+                Start Your Website →
               </Link>
             </div>
           </div>

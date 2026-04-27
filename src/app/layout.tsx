@@ -12,11 +12,19 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Sites by Miguel — Professional Web Development Studio',
+  title:
+    'Sites By Miguel | Web Design for Student Organizations and Small Businesses',
   description:
-    'An independent web studio crafting fast, modern, and beautifully designed websites for ambitious brands, founders, and organizations.',
+    'Sites By Miguel builds clean, modern websites for student organizations, small businesses, nonprofits, and personal brands. Based at the University of Michigan.',
   keywords:
-    'web development, website design, portfolio, Sites by Miguel, Next.js, React, Michigan',
+    'web design, student organization websites, University of Michigan web developer, small business websites, Sites By Miguel, web development, React, Next.js, nonprofit websites, campus group websites',
+  openGraph: {
+    title:
+      'Sites By Miguel | Web Design for Student Organizations and Small Businesses',
+    description:
+      'Clean, modern websites for student organizations, small businesses, nonprofits, and personal brands.',
+    type: 'website',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },

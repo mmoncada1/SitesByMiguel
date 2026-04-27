@@ -31,12 +31,39 @@ const faqs = [
   },
 ]
 
+const projectTypes = [
+  'Student organization',
+  'Small business',
+  'Nonprofit',
+  'Personal brand',
+  'Other',
+]
+
+const timelines = [
+  'ASAP (under 2 weeks)',
+  '2–4 weeks',
+  '1–2 months',
+  'Flexible / not sure yet',
+]
+
+const budgets = [
+  'Under $500',
+  '$500–$1,500',
+  '$1,500–$3,500',
+  '$3,500+',
+  'Not sure yet',
+]
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
-    message: '',
+    organization: '',
+    projectType: '',
+    needs: '',
+    timeline: '',
+    budget: '',
+    existingSite: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(
@@ -47,6 +74,21 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
+
+    const subject = `New website inquiry — ${
+      formData.organization || formData.name
+    }`
+    const message = [
+      `Organization: ${formData.organization || '—'}`,
+      `Project type: ${formData.projectType || '—'}`,
+      `Timeline: ${formData.timeline || '—'}`,
+      `Budget: ${formData.budget || '—'}`,
+      `Existing site / social: ${formData.existingSite || '—'}`,
+      '',
+      'What they need help with:',
+      formData.needs || '—',
+    ].join('\n')
+
     try {
       await emailjs.send(
         'service_al1be1b',
@@ -54,31 +96,34 @@ export default function Contact() {
         {
           from_name: formData.name,
           from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
+          subject,
+          message,
         },
         'Vb9t-GfEjGql1_4_S'
       )
       setSubmitStatus('success')
-      setFormData({ name: '', email: '', subject: '', message: '' })
+      setFormData({
+        name: '',
+        email: '',
+        organization: '',
+        projectType: '',
+        needs: '',
+        timeline: '',
+        budget: '',
+        existingSite: '',
+      })
     } catch (error) {
       console.error('Error sending email:', error)
       setSubmitStatus('error')
-      const subject = encodeURIComponent(formData.subject)
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-      )
-      window.open(
-        `mailto:mmoncada105@gmail.com?subject=${subject}&body=${body}`,
-        '_blank'
-      )
     } finally {
       setIsSubmitting(false)
     }
   }
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
@@ -190,22 +235,30 @@ export default function Contact() {
             <div className="lg:col-span-3">
               <div className="card p-8 sm:p-10">
                 <h2 className="text-3xl font-semibold tracking-tight text-ink-900">
-                  Send a message
+                  Project inquiry
                 </h2>
                 <p className="mt-2 text-sm text-ink-500">
-                  Share a bit about your project, timeline, and budget.
+                  The more you share, the faster I can give you a useful
+                  response.
                 </p>
 
                 {submitStatus === 'success' && (
-                  <div className="mt-6 flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">
+                  <div
+                    role="status"
+                    className="mt-6 flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800"
+                  >
                     <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none" />
-                    Message sent! I&apos;ll get back to you within 24 hours.
+                    Thanks for reaching out. I&apos;ll get back to you soon to
+                    talk through your project.
                   </div>
                 )}
                 {submitStatus === 'error' && (
-                  <div className="mt-6 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
-                    Something went wrong. Your email client should open as a
-                    backup — or email me directly at mmoncada105@gmail.com.
+                  <div
+                    role="alert"
+                    className="mt-6 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800"
+                  >
+                    Something went wrong. Please email me directly at
+                    mmoncada105@gmail.com.
                   </div>
                 )}
 
@@ -225,7 +278,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         className="input-modern"
-                        placeholder="Your name"
+                        placeholder="Your full name"
                       />
                     </div>
                     <div>
@@ -247,41 +300,131 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className="mb-2 block text-xs font-semibold uppercase tracking-wider text-ink-500"
-                    >
-                      Subject
-                    </label>
-                    <input
-                      id="subject"
-                      name="subject"
-                      required
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="input-modern"
-                      placeholder="Project inquiry"
-                    />
+
+                  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <div className="flex flex-col">
+                      <label
+                        htmlFor="organization"
+                        className="mb-2 block text-xs font-semibold uppercase tracking-wider text-ink-500"
+                      >
+                        Organization
+                      </label>
+                      <input
+                        id="organization"
+                        name="organization"
+                        value={formData.organization}
+                        onChange={handleChange}
+                        className="input-modern mt-auto"
+                        placeholder="Your org or company"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <label
+                        htmlFor="projectType"
+                        className="mb-2 block text-xs font-semibold uppercase tracking-wider text-ink-500"
+                      >
+                        Type of project
+                      </label>
+                      <select
+                        id="projectType"
+                        name="projectType"
+                        value={formData.projectType}
+                        onChange={handleChange}
+                        className="input-modern mt-auto"
+                      >
+                        <option value="">Select one…</option>
+                        {projectTypes.map((t) => (
+                          <option key={t} value={t}>
+                            {t}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
+
                   <div>
                     <label
-                      htmlFor="message"
+                      htmlFor="needs"
                       className="mb-2 block text-xs font-semibold uppercase tracking-wider text-ink-500"
                     >
-                      Message
+                      What do you need help with?
                     </label>
                     <textarea
-                      id="message"
-                      name="message"
+                      id="needs"
+                      name="needs"
                       required
-                      rows={6}
-                      value={formData.message}
+                      rows={5}
+                      value={formData.needs}
                       onChange={handleChange}
                       className="input-modern resize-none"
-                      placeholder="Tell me about your project..."
+                      placeholder="A new website, a redesign, recruitment pages, an application form, event pages, etc."
                     />
                   </div>
+
+                  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <div>
+                      <label
+                        htmlFor="timeline"
+                        className="mb-2 block text-xs font-semibold uppercase tracking-wider text-ink-500"
+                      >
+                        Desired timeline
+                      </label>
+                      <select
+                        id="timeline"
+                        name="timeline"
+                        value={formData.timeline}
+                        onChange={handleChange}
+                        className="input-modern"
+                      >
+                        <option value="">Select a timeline…</option>
+                        {timelines.map((t) => (
+                          <option key={t} value={t}>
+                            {t}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="budget"
+                        className="mb-2 block text-xs font-semibold uppercase tracking-wider text-ink-500"
+                      >
+                        Budget range
+                      </label>
+                      <select
+                        id="budget"
+                        name="budget"
+                        value={formData.budget}
+                        onChange={handleChange}
+                        className="input-modern"
+                      >
+                        <option value="">Select a range…</option>
+                        {budgets.map((b) => (
+                          <option key={b} value={b}>
+                            {b}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="existingSite"
+                      className="mb-2 block text-xs font-semibold uppercase tracking-wider text-ink-500"
+                    >
+                      Website or social link (if you have one)
+                    </label>
+                    <input
+                      id="existingSite"
+                      name="existingSite"
+                      value={formData.existingSite}
+                      onChange={handleChange}
+                      className="input-modern"
+                      placeholder="https://instagram.com/yourorg or yoursite.com"
+                    />
+                  </div>
+
                   <button
                     type="submit"
                     disabled={isSubmitting}
@@ -295,7 +438,7 @@ export default function Contact() {
                     ) : (
                       <>
                         <Send className="h-4 w-4" />
-                        Send message
+                        Start My Website
                       </>
                     )}
                   </button>
