@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" shape-rendering="geometricPrecision">
+  <defs>
+    <linearGradient id="dot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Square background, no rounded corners -->
+  <rect width="400" height="400" fill="#0f172a"/>
+
+  <!-- Bold 'M' wordmark, scaled to match the favicon proportions -->
+  <path
+    transform="scale(6.25)"
+    d="M16 46 V18 H22 L32 36 L42 18 H48 V46 H42.5 V28.5 L33.7 43.5 H30.3 L21.5 28.5 V46 Z"
+    fill="#ffffff"
+  />
+
+  <!-- Brand accent dot -->
+  <circle cx="325" cy="325" r="38" fill="url(#dot)"/>
+  <circle cx="325" cy="325" r="38" fill="none" stroke="#0f172a" stroke-width="12"/>
+</svg>
