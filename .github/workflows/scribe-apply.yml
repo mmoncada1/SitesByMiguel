@@ -12,12 +12,11 @@ jobs:
   apply:
     runs-on: ubuntu-latest
     steps:
-      - name: Submit Scribe application
+      - uses: actions/checkout@v4
+      - name: Submit Scribe application and record response
         shell: bash
         run: |
           set -u
-          RESPONSE_FILE="scribe/application-result.txt"
-          mkdir -p scribe
           BODY_FILE="$(mktemp)"
           HTTP_CODE=$(curl --silent --show-error \
             -o "$BODY_FILE" \
@@ -29,9 +28,9 @@ jobs:
             echo "http_status=$HTTP_CODE"
             echo "response_body:"
             cat "$BODY_FILE"
-          } > "$RESPONSE_FILE"
+          } > scribe/application-result.txt
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "$RESPONSE_FILE"
+          git add scribe/application-result.txt
           git commit -m "Record Scribe application response" || true
-          git push || true
+          git push
