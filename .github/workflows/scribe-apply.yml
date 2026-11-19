@@ -1,0 +1,17 @@
+name: Scribe application
+
+on:
+  push:
+    paths:
+      - '.scribe-apply-trigger'
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit Scribe application
+        run: |
+          curl --fail-with-body --silent --show-error \
+            -X POST https://apply.scribe.com \
+            -H 'Content-Type: application/json' \
+            --data '{"full_name":"Miguel Moncada-Larrotiz","email":"moncada@umich.edu","github_url":"https://github.com/mmoncada1","resume_url":"https://raw.githubusercontent.com/mmoncada1/SitesByMiguel/main/scribe/Miguel_Moncada-Larrotiz_Resume.md"}'
