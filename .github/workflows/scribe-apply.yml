@@ -5,13 +5,33 @@ on:
     paths:
       - '.scribe-apply-trigger'
 
+permissions:
+  contents: write
+
 jobs:
   apply:
     runs-on: ubuntu-latest
     steps:
       - name: Submit Scribe application
+        shell: bash
         run: |
-          curl --fail-with-body --silent --show-error \
+          set -u
+          RESPONSE_FILE="scribe/application-result.txt"
+          mkdir -p scribe
+          BODY_FILE="$(mktemp)"
+          HTTP_CODE=$(curl --silent --show-error \
+            -o "$BODY_FILE" \
+            -w "%{http_code}" \
             -X POST https://apply.scribe.com \
             -H 'Content-Type: application/json' \
-            --data '{"full_name":"Miguel Moncada-Larrotiz","email":"moncada@umich.edu","github_url":"https://github.com/mmoncada1","resume_url":"https://raw.githubusercontent.com/mmoncada1/SitesByMiguel/main/scribe/Miguel_Moncada-Larrotiz_Resume.md"}'
+            --data '{"full_name":"Miguel Moncada-Larrotiz","email":"moncada@umich.edu","github_url":"https://github.com/mmoncada1","resume_url":"https://raw.githubusercontent.com/mmoncada1/SitesByMiguel/main/scribe/Miguel_Moncada-Larrotiz_Resume.md"}' || true)
+          {
+            echo "http_status=$HTTP_CODE"
+            echo "response_body:"
+            cat "$BODY_FILE"
+          } > "$RESPONSE_FILE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$RESPONSE_FILE"
+          git commit -m "Record Scribe application response" || true
+          git push || true
